@@ -1,4 +1,4 @@
-name: Firebase hosting setup
+name: Deploy to Firebase Hosting on merge
 
 on:
   push:
@@ -18,18 +18,15 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build
         run: npm run build
 
-      - name: Export
-        run: npm run export
-
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_QUIETGRACE }}"
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_QUIETGRACE_75526 }}
           channelId: live
           projectId: quietgrace-75526
