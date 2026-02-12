@@ -1,0 +1,17 @@
+
+build_and_deploy
+failed 3 minutes ago in 20s
+1s
+0s
+16s
+0s
+Run FirebaseExtended/action-hosting-deploy@v0
+Verifying firebase.json exists
+  Error: firebase.json file not found. If your firebase.json file is not in the root of your repo, edit the entryPoint option of this GitHub action.
+  ***
+    conclusion: 'failure',
+    output: ***
+      title: 'Deploy preview failed',
+      summary: 'Error: firebase.json file not found. If your firebase.json file is not in the root of your repo, edit the entryPoint option of this GitHub action.'
+    ***
+  ***
